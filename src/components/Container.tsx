@@ -8,7 +8,7 @@ type ContainerProps = {
 export const Container = styled.div<ContainerProps>`
   min-width: 100vw;
   min-height: 100vh;
-  background-color: ${ ({ bgColor }) => bgColor || '#634545'};
+  background-color: ${ ({ bgColor, theme }) => bgColor || theme.primary };
   color: ${({ textColor }) => textColor || 'black'};
   padding: 20px;
   color: #7a63b9;
