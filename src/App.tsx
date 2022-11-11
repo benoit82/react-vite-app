@@ -2,9 +2,10 @@ import { FC } from 'react'
 import { CustomTheme, ThemeProvider } from 'styled-components'
 import { Button } from './components/Button';
 import { Container, NestedContainer } from './components/Container'
+import { useStore } from './store/mainStore';
 
 const App: FC = () => {
-  const activeDarkMode = true;
+  const { darkThemeStatus, count, toggleTheme } = useStore((state) => state);
 
   const darkTheme: CustomTheme = {
     primary: '#242424',
@@ -17,11 +18,11 @@ const App: FC = () => {
   }
 
   return (
-    <ThemeProvider theme={activeDarkMode ? darkTheme : theme }>
+    <ThemeProvider theme={darkThemeStatus ? darkTheme : theme }>
       <Container textColor='green' >
-        <p>Test :p</p>
+        <p>count : <span>{count}</span></p>
         <NestedContainer>
-          <Button onClick={(e) => console.log(e)}>click on me</Button>
+          <Button onClick={() => toggleTheme()}>switch theme</Button>
         </NestedContainer>
       </Container>
     </ThemeProvider>
