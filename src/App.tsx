@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { CustomTheme, ThemeProvider } from 'styled-components'
-import { Container } from './components/Container'
+import { Button } from './components/Button';
+import { Container, NestedContainer } from './components/Container'
 
 const App: FC = () => {
   const activeDarkMode = true;
@@ -19,6 +20,9 @@ const App: FC = () => {
     <ThemeProvider theme={activeDarkMode ? darkTheme : theme }>
       <Container textColor='green' >
         <p>Test :p</p>
+        <NestedContainer>
+          <Button onClick={(e) => console.log(e)}>click on me</Button>
+        </NestedContainer>
       </Container>
     </ThemeProvider>
   )
