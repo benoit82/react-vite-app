@@ -4,7 +4,7 @@ import { Container } from './components/Container'
 
 const App: FC = () => {
   return (
-    <Container bgColor="#BADA55">
+    <Container textColor='orange' >
       <p>Test :p</p>
     </Container>
   )
