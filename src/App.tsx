@@ -1,14 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { FC } from 'react'
+import { Container } from './components/Container'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+const App: FC = () => {
   return (
-    <>
-      <a href="http://www.google.fr/" target='_blank'>Google, pour vos recherches...</a>
-    </>
+    <Container bgColor="#BADA55">
+      <p>Test :p</p>
+    </Container>
   )
 }
 
