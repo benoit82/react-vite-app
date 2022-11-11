@@ -4,12 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently --kill-others \"vite\" \"yarn prettier-watch\"",
+    "dev-tmp": "concurrently --kill-others \"vite\" \"yarn prettier-watch\"",
+    "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "lint": "eslint . --ext .ts",
-    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts(x)' --write",
-    "prettier-watch": "onchange 'src/**/*.ts' 'src/**/*.tsx' -- prettier --write {{changed}}"
+    "preview": "yarn build && vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -25,11 +23,9 @@
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.42.1",
     "@vitejs/plugin-react": "^2.2.0",
-    "concurrently": "^7.5.0",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "onchange": "^7.1.0",
     "prettier": "^2.7.1",
     "typescript": "^4.6.4",
     "typescript-plugin-styled-components": "^2.0.0",
