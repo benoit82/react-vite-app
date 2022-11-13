@@ -4,18 +4,17 @@ import { Button } from './Button';
 type ContainerProps = {
   bgColor?: string;
   textColor?: 'orange' | 'green';
-}
+};
 
 export const Container = styled.div<ContainerProps>`
   min-width: 100vw;
   min-height: 100vh;
-  background-color: ${ ({ bgColor, theme }) => bgColor || theme.primary };
-  color: ${ ({ textColor, theme }) => textColor || theme.secondary };
+  background-color: ${({ bgColor, theme }) => bgColor || theme.primary};
+  color: ${({ textColor, theme }) => textColor || theme.secondary};
   padding: 20px;
-`
+`;
 
-
-export const NestedContainer =  styled(Container)`
+export const NestedContainer = styled(Container)`
   background-color: #2b2b68;
   min-width: 0;
   min-height: 0;
@@ -28,4 +27,4 @@ export const NestedContainer =  styled(Container)`
       visibility: visible;
     }
   }
-`
+`;

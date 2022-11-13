@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev-tmp": "concurrently --kill-others \"vite\" \"yarn prettier-watch\"",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "yarn build && vite preview"
