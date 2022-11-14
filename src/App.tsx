@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Button } from '@components/Button';
-import { Container, NestedContainer } from '@components/Container';
+import { Button, Container, NestedContainer } from '@components/index';
 import { useStore } from '@store/mainStore';
 import { darkTheme, lightTheme } from '@themes/index';
 
