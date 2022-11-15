@@ -1,20 +1,34 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Button, Container, NestedContainer } from '@components/index';
+import {
+  APITestContainer,
+  Button,
+  Container,
+  NestedContainer,
+} from '@components/index';
 import { useStore } from '@store/mainStore';
 import { darkTheme, lightTheme } from '@themes/index';
 
 const App: FC = () => {
-  const { darkThemeStatus, count, toggleTheme } = useStore((state) => state);
+  const { darkThemeStatus, count, fakeData, toggleTheme, getFakeData } =
+    useStore((state) => state);
+
+  useEffect(() => {
+    getFakeData();
+  }, []);
 
   return (
     <ThemeProvider theme={darkThemeStatus ? darkTheme : lightTheme}>
       <Container textColor="green">
+        <APITestContainer>
+          {fakeData && <p>DATA from API: {fakeData}</p>}
+          <Button onClick={getFakeData}>Get data</Button>
+        </APITestContainer>
         <p>
-          count : <span>{count}</span>
+          switch theme counter : <span>{count}</span>
         </p>
         <NestedContainer>
-          <Button onClick={() => toggleTheme()}>switch theme</Button>
+          <Button onClick={toggleTheme}>switch theme</Button>
         </NestedContainer>
       </Container>
     </ThemeProvider>

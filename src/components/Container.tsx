@@ -6,6 +6,9 @@ type ContainerProps = {
 };
 
 export const Container = styled.div<ContainerProps>`
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
   min-width: 100vw;
   min-height: 100vh;
   background-color: ${({ bgColor, theme }) => bgColor || theme.primary};
