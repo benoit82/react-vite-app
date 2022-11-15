@@ -6,12 +6,12 @@ import {
   Container,
   NestedContainer,
 } from '@components/index';
-import { useStore } from '@store/mainStore';
 import { darkTheme, lightTheme } from '@themes/index';
+import useGetStore from 'hooks/useGetStore';
 
 const App: FC = () => {
   const { darkThemeStatus, count, fakeData, toggleTheme, getFakeData } =
-    useStore((state) => state);
+    useGetStore();
 
   useEffect(() => {
     getFakeData();
