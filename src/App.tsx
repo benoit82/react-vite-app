@@ -5,6 +5,7 @@ import {
   Button,
   Container,
   NestedContainer,
+  Title,
 } from '@components/index';
 import { darkTheme, lightTheme } from '@themes/index';
 import useGetStore from 'hooks/useGetStore';
@@ -21,8 +22,8 @@ const App: FC = () => {
     <ThemeProvider theme={darkThemeStatus ? darkTheme : lightTheme}>
       <Container textColor="green">
         <APITestContainer>
-          {fakeData && <p>DATA from API: {fakeData}</p>}
-          <Button onClick={getFakeData}>Get data</Button>
+          <Title>{fakeData}</Title>
+          <Button onClick={getFakeData}>Get a random lorem title</Button>
         </APITestContainer>
         <p>
           switch theme counter : <span>{count}</span>
