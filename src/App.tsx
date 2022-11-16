@@ -1,6 +1,11 @@
 import { FC, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { APISection, Container, SwitchThemeSection } from '@components/index';
+import {
+  APISection,
+  Container,
+  SwitchThemeSection,
+  Title,
+} from '@components/index';
 import { darkTheme, lightTheme } from '@themes/index';
 import useGetStore from 'hooks/useGetStore';
 
@@ -14,6 +19,8 @@ const App: FC = () => {
   return (
     <ThemeProvider theme={darkThemeStatus ? darkTheme : lightTheme}>
       <Container textColor="green">
+        <Title>Welcome to the new pulsar version APP3</Title>
+        <p>new feature : the theme switcher !</p>
         <APISection />
         <SwitchThemeSection />
       </Container>
