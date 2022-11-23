@@ -2,6 +2,7 @@ import { FC, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import {
   APISection,
+  CatchPhrase,
   Container,
   SwitchThemeSection,
   Title,
@@ -19,8 +20,10 @@ const App: FC = () => {
   return (
     <ThemeProvider theme={darkThemeStatus ? darkTheme : lightTheme}>
       <Container textColor="green">
-        <Title>Welcome to the new pulsar version APP3</Title>
-        <p>new feature : the theme switcher !</p>
+        <Title className="testClass">
+          Welcome to the new pulsar version APP3
+        </Title>
+        <CatchPhrase dataId={4}>new feature : the theme switcher !</CatchPhrase>
         <APISection />
         <SwitchThemeSection />
       </Container>

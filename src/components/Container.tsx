@@ -11,7 +11,7 @@ export const Container = styled.div<ContainerProps>`
   row-gap: 20px;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: ${({ bgColor, theme }) => bgColor || theme.primary};
-  color: ${({ textColor, theme }) => textColor || theme.secondary};
+  background-color: ${({ bgColor, theme }) => bgColor || theme.color.primary};
+  color: ${({ textColor, theme }) => textColor || theme.color.secondary};
   padding: 20px;
 `;
