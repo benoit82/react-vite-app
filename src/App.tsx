@@ -23,7 +23,7 @@ const App: FC = () => {
         <Title className="testClass">
           Welcome to the new pulsar version APP3
         </Title>
-        <CatchPhrase dataId={4}>new feature : the theme switcher !</CatchPhrase>
+        <CatchPhrase dataId={9}>new feature : the theme switcher !</CatchPhrase>
         <APISection />
         <SwitchThemeSection />
       </Container>
