@@ -23,9 +23,7 @@ const after = css`
   }
 `;
 
-export const CatchPhrase = styled.p.attrs((props) => ({
-  'data-id': props.dataId,
-}))<CatchPhraseProps>`
+export const CatchPhrase = styled.p<CatchPhraseProps>`
   background-color: rgba(119, 119, 119, 0.5);
   font-weight: bold;
   font-style: italic;

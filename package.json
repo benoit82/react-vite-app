@@ -10,13 +10,11 @@
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
-  "dependencies": {
+  "devDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.6",
-    "zustand": "^4.1.4"
-  },
-  "devDependencies": {
+    "zustand": "^4.1.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/node": "^18.11.9",
